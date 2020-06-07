@@ -1,15 +1,8 @@
-#!/bin/bash
-#=============================================================
-# https://github.com/P3TERX/Actions-OpenWrt
-# File name: diy-part1.sh
-# Description: OpenWrt DIY script part 1 (Before Update feeds)
-# Lisence: MIT
-# Author: P3TERX
-# Blog: https://p3terx.com
-#=============================================================
+git clone https://github.com/fw876/helloworld.git package/luci-app-ssr-plus
+git clone https://github.com/8688Add/luci-theme-argon-dark-mod.git package/luci-theme-argon-dark-mod
+git clone https://github.com/8688Add/luci-app-passwall.git package/luci-app-passwall
+#git clone https://github.com/destan19/OpenAppFilter.git package/luci-app-oaf
+git clone https://github.com/8688Add/small.git package/small
 
-# Uncomment a feed source
-# sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-
-# Add a feed source
-#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
+# Modify default IP
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
