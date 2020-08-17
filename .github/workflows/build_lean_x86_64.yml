@@ -7,23 +7,15 @@
 
 name: Build_x86_64
 
-on: 
+on:
+  repository_dispatch:
   release:
-    types: [published]
+    types: published
   push:
     branches:
       - master
     paths:
-      - 'x86_64.config'
-  #push:
-  #  branches: 
-  #    - master
-
-  #schedule:
-  #  - cron: 0 8 * * 5
-  
-  #watch:
-  #  types: [started]
+      - x86_64.config
 
 jobs:
   build:
