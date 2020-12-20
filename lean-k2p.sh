@@ -8,4 +8,4 @@ git clone https://github.com/pymumu/openwrt-smartdns.git package/smartdns
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.4.1/g' package/base-files/files/bin/config_generate
 # Modify smartrdns version
-sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=5.2020.04/g;s/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=Release33/g' package/smartdns/Makefile 
+sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=Release33/g;s/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=Release33/g' package/smartdns/Makefile 
